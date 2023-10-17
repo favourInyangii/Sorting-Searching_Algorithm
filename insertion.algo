@@ -1,0 +1,24 @@
+ALGORITHM algorithm_insertion
+VAR
+    i= INTEGER
+    j= INTEGER
+BEGIN 
+// moving of boundaries
+    FOR i FROM 1 TO len.arr-1 STEP  DO
+        current_element = arr[i]
+        // pick the current element to insert
+        j = i -1
+        // compare the current_element with the elements in the sorted subarray(from 0 to i-1)
+        WHILE (j>= 0 and current_element< arr[j]) DO
+            arr[ j+1]= array[j]
+            //shift elements to the right
+            j-= 1
+            //insert current_element into the sorted subarray
+            arr[j+ 1] = current_element
+            //example
+            array = [13, 11, 14, 2, 5]
+            insertion_sort(array)
+            print("sorted array is:", my_workings)
+        END_WHILE
+    END_FOR
+END
